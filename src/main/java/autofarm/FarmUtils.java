@@ -3,6 +3,7 @@ package autofarm;
 import meteordevelopment.meteorclient.utils.player.FindItemResult;
 import meteordevelopment.meteorclient.utils.player.InvUtils;
 import meteordevelopment.meteorclient.utils.player.Rotations;
+import meteordevelopment.meteorclient.utils.player.SwingMode;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
@@ -20,7 +21,7 @@ public class FarmUtils {
             mc.player.setShiftKeyDown(false);
             InvUtils.swap(findItemResult.slot(), true);
             mc.gameMode.useItemOn(mc.player, InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(pos), Direction.UP, pos, false));
-            mc.player.swing(InteractionHand.MAIN_HAND);
+            SwingMode.Both.interactSwing(InteractionHand.MAIN_HAND);
             InvUtils.swapBack();
             mc.player.setShiftKeyDown(wasSneaking);
         };
