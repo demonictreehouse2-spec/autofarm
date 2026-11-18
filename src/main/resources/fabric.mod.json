@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "autofarm-addon",
+  "version": "${version}",
+
+  "name": "AutoFarm Addon",
+  "description": "Standalone Meteor Client addon containing only the AutoFarm module (extracted from Meteor Rejects).",
+  "authors": [
+    "Cloudburst",
+    "StormyBytes"
+  ],
+  "contact": {
+    "sources": "https://github.com/AntiCope/meteor-rejects"
+  },
+
+  "license": "GPL-3.0",
+
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "autofarm.AutoFarmAddon"
+    ]
+  },
+  "depends": {
+    "java": ">=25",
+    "minecraft": "~${mc_version}",
+    "fabricloader": ">=0.19.5",
+    "meteor-client": "*"
+  }
+}
